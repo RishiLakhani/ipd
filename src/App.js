@@ -20,6 +20,8 @@ function App() {
   const [val0, setVal0] = React.useState([])
   const [val1, setVal1] = React.useState([])
   const [val2, setVal2] = React.useState([])
+  const [out, setOut] = React.useState([])
+
 
   const lines = () => {
     let y;
@@ -30,35 +32,44 @@ function App() {
     for (let x = 0; x <= 800; x += 800) {
       y = (0.2934828479821102 * x) + 0.10641739637440618;
       temp.push({ x, y })
-    } 
-    setVal(temp)
-    for (let x = 0; x <= 800; x += 800) {
       y = (0.24720565541730846 * x) + 0.008430595347393668;
       temp0.push({ x, y })
-    }
-    setVal0(temp0)
-    for (let x = 0; x <= 800; x += 800) {
       y = (0.3292769175630243 * x) + 0.012928603779648079;
       temp1.push({ x, y })
-    }
-    setVal1(temp1)
-    for (let x = 0; x <= 800; x += 800) {
       y = (0.014922801740579621 * x) + 0.009833021051867244;
       temp2.push({ x, y })
     }
+    setVal(temp)
+    setVal0(temp0)
+    setVal1(temp1)
     setVal2(temp2)
+  }
+
+  const output = () => {
+    if (ent > ((0.24720565541730846 * tot) + 0.008430595347393668)) {
+      setOut((prev) => [...prev, "Entertainment"])
+    }
+    if (soc > ((0.3292769175630243 * tot) + 0.012928603779648079)) {
+      setOut((prev) => [...prev, "Social Media"])
+    }
+    if (gam > ((0.014922801740579621 * tot) + 0.009833021051867244)) {
+      setOut((prev) => [...prev, "Gaming"])
+    }
   }
 
   const handleCalc = () => {
     setTot(() => ent + soc + gam + edu + haf + bam + baf + oth)
     setSub(() => ent + soc + gam - edu - haf - bam - baf)
-    lines()
-    console.log(val)
-    console.log(val0)
-    console.log(val1)
-    console.log(val2)
-    setSubmit(true)
+    
   }
+
+  React.useEffect(() => {
+    if (tot !== 0 && sub !== 0) {
+      lines()
+      output()
+      setSubmit(true)
+    }
+  }, [tot, sub])
 
   return (
     <div>
@@ -71,7 +82,7 @@ function App() {
         <>
           <Typography variant="h4" textAlign='center' >Output</Typography>
           <Chart val={val} val0={val0} val1={val1} val2={val2} tot={tot} sub={sub} ent={ent} soc={soc} gam={gam} />
-          <Output />
+          <Output out={out} />
         </>
       )}
     </div>
