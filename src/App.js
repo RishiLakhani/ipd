@@ -60,7 +60,6 @@ function App() {
   const handleCalc = () => {
     setTot(() => ent + soc + gam + edu + haf + bam + baf + oth)
     setSub(() => ent + soc + gam - edu - haf - bam - baf)
-    
   }
 
   React.useEffect(() => {
