@@ -13,7 +13,9 @@
     "react-chartjs-2": "^4.1.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "typewriter-effect": "^2.18.2",
+    "web-vitals": "^2.1.4",
+    "windups": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

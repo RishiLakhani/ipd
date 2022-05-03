@@ -1,11 +1,13 @@
 import React from 'react'
+import "./App.css";
 import Form from './components/Form'
 import Chart from './components/Chart'
 import Output from './components/Output'
 import { Typography } from '@mui/material'
+import Landing from './components/Landing';
 
 function App() {
-  const [submit, setSubmit] = React.useState(false)
+  const [submit, setSubmit] = React.useState(0)
   const [ent, setEnt] = React.useState(0)
   const [soc, setSoc] = React.useState(0)
   const [gam, setGam] = React.useState(0)
@@ -29,7 +31,7 @@ function App() {
     let temp0 = [];
     let temp1 = [];
     let temp2 = [];
-    for (let x = 0; x <= 800; x += 800) {
+    for (let x = 0; x <= tot; x += tot) {
       y = (0.2934828479821102 * x) + 0.10641739637440618;
       temp.push({ x, y })
       y = (0.24720565541730846 * x) + 0.008430595347393668;
@@ -66,24 +68,41 @@ function App() {
     if (tot !== 0 && sub !== 0) {
       lines()
       output()
-      setSubmit(true)
+      setSubmit(2)
     }
   }, [tot, sub])
 
   return (
     <div>
-      {!submit ? (
+      {submit === 0 &&
+        <Landing handleClick={setSubmit} />
+      }
+      {submit === 1 &&
         <>
-          <Typography variant="h4" textAlign='center' >Input</Typography>
+          <nav className="header">
+            <h1 className="logo" onClick={() => setSubmit(0)}>AppRehab</h1>
+          </nav>
+          <br />
           <Form setEnt={setEnt} setSoc={setSoc} setGam={setGam} setEdu={setEdu} setHaf={setHaf} setBam={setBam} setBaf={setBaf} setOth={setOth} handleCalc={handleCalc} />
         </>
-      ) : (
+      }
+      {submit === 2 &&
         <>
-          <Typography variant="h4" textAlign='center' >Output</Typography>
+          <nav className="header">
+            <h1 className="logo" onClick={() => setSubmit(0)}>AppRehab</h1>
+          </nav>
+          <br />
+          <Typography
+            variant="inherit"
+            textAlign="center"
+            style={{ fontWeight: 700, fontSize: 40 }}
+          >
+            Results of the Analysis
+          </Typography>
           <Chart val={val} val0={val0} val1={val1} val2={val2} tot={tot} sub={sub} ent={ent} soc={soc} gam={gam} />
           <Output out={out} />
         </>
-      )}
+      }
     </div>
   )
 }

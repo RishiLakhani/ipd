@@ -13,12 +13,12 @@ function Chart(props) {
             <Grid item xs={6}>
                 <Typography>Unproductive - Productive</Typography>
                 <Scatter
-                    id='total'
                     data={{
                         datasets: [{
                             label: 'Expected',
                             data: val,
-                            backgroundColor: 'rgb(255, 99, 132)',
+                            backgroundColor: "#0bda8f",
+                            borderColor: "#0bda8f",
                             tension: 0,
                             showLine: true
                         }, {
@@ -27,14 +27,24 @@ function Chart(props) {
                                 x: tot,
                                 y: sub
                             }],
-                            backgroundColor: 'rgb(0, 0, 0)'
+                            backgroundColor: '#4630eb'
                         }]
                     }}
                     options={{
                         scales: {
                             x: {
                                 type: 'linear',
-                                position: 'bottom'
+                                position: 'bottom',
+                                title: {
+                                    display: 'true',
+                                    text: 'Total Screen Time'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: 'true',
+                                    text: 'Unprod-Prod Time'
+                                }
                             }
                         }
                     }}
@@ -43,12 +53,12 @@ function Chart(props) {
             <Grid item xs={6}>
                 <Typography>Entertainment</Typography>
                 <Scatter
-                    id='ent'
                     data={{
                         datasets: [{
                             label: 'Expected',
                             data: val0,
-                            backgroundColor: 'rgb(255, 99, 132)',
+                            backgroundColor: "#0bda8f",
+                            borderColor: "#0bda8f",
                             tension: 0,
                             showLine: true
                         }, {
@@ -57,14 +67,24 @@ function Chart(props) {
                                 x: tot,
                                 y: ent
                             }],
-                            backgroundColor: 'rgb(0, 0, 0)'
+                            backgroundColor: '#4630eb'
                         }]
                     }}
                     options={{
                         scales: {
                             x: {
                                 type: 'linear',
-                                position: 'bottom'
+                                position: 'bottom',
+                                title: {
+                                    display: 'true',
+                                    text: 'Total Screen Time'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: 'true',
+                                    text: 'Entertainment Time'
+                                }
                             }
                         }
                     }}
@@ -73,12 +93,12 @@ function Chart(props) {
             <Grid item xs={6}>
                 <Typography>Social Media</Typography>
                 <Scatter
-                    id='soc'
                     data={{
                         datasets: [{
                             label: 'Expected',
                             data: val1,
-                            backgroundColor: 'rgb(255, 99, 132)',
+                            backgroundColor: "#0bda8f",
+                            borderColor: "#0bda8f",
                             tension: 0,
                             showLine: true
                         }, {
@@ -87,14 +107,24 @@ function Chart(props) {
                                 x: tot,
                                 y: soc
                             }],
-                            backgroundColor: 'rgb(0, 0, 0)'
+                            backgroundColor: '#4630eb'
                         }]
                     }}
                     options={{
                         scales: {
                             x: {
                                 type: 'linear',
-                                position: 'bottom'
+                                position: 'bottom',
+                                title: {
+                                    display: 'true',
+                                    text: 'Total Screen Time'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: 'true',
+                                    text: 'Social Media Time'
+                                }
                             }
                         }
                     }}
@@ -103,12 +133,12 @@ function Chart(props) {
             <Grid item xs={6}>
                 <Typography>Gaming</Typography>
                 <Scatter
-                    id='gam'
                     data={{
                         datasets: [{
                             label: 'Expected',
                             data: val2,
-                            backgroundColor: 'rgb(255, 99, 132)',
+                            backgroundColor: "#0bda8f",
+                            borderColor: "#0bda8f",
                             tension: 0,
                             showLine: true
                         }, {
@@ -117,14 +147,24 @@ function Chart(props) {
                                 x: tot,
                                 y: gam
                             }],
-                            backgroundColor: 'rgb(0, 0, 0)'
+                            backgroundColor: '#4630eb'
                         }]
                     }}
                     options={{
                         scales: {
                             x: {
                                 type: 'linear',
-                                position: 'bottom'
+                                position: 'bottom',
+                                title: {
+                                    display: 'true',
+                                    text: 'Total Screen Time'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: 'true',
+                                    text: 'Gaming Time'
+                                }
                             }
                         }
                     }}
