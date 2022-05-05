@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ea9225d4.css",
+    "main.js": "/static/js/main.c039a8b0.js",
+    "static/media/home-hero_pm.svg": "/static/media/home-hero_pm.6a73a63d2a0399892de8230031c25209.svg",
+    "index.html": "/index.html",
+    "main.ea9225d4.css.map": "/static/css/main.ea9225d4.css.map",
+    "main.c039a8b0.js.map": "/static/js/main.c039a8b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ea9225d4.css",
+    "static/js/main.c039a8b0.js"
+  ]
+}
