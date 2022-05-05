@@ -37,13 +37,34 @@ function Chart(props) {
                                 position: 'bottom',
                                 title: {
                                     display: 'true',
+                                    color: '#7F7F7F',
                                     text: 'Total Screen Time'
+                                },
+                                grid: {
+                                    color: '#7F7F7F'
+                                },
+                                ticks: {
+                                    color: '#7F7F7F'
                                 }
                             },
                             y: {
                                 title: {
                                     display: 'true',
+                                    color: '#7F7F7F',
                                     text: 'Unprod-Prod Time'
+                                },
+                                grid: {
+                                    color: '#7F7F7F'
+                                },
+                                ticks: {
+                                    color: '#7F7F7F'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#7F7F7F'
                                 }
                             }
                         }
@@ -77,13 +98,34 @@ function Chart(props) {
                                 position: 'bottom',
                                 title: {
                                     display: 'true',
+                                    color: '#7F7F7F',
                                     text: 'Total Screen Time'
+                                },
+                                grid: {
+                                    color: '#7F7F7F'
+                                },
+                                ticks: {
+                                    color: '#7F7F7F'
                                 }
                             },
                             y: {
                                 title: {
                                     display: 'true',
+                                    color: '#7F7F7F',
                                     text: 'Entertainment Time'
+                                },
+                                grid: {
+                                    color: '#7F7F7F'
+                                },
+                                ticks: {
+                                    color: '#7F7F7F'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#7F7F7F'
                                 }
                             }
                         }
@@ -117,13 +159,34 @@ function Chart(props) {
                                 position: 'bottom',
                                 title: {
                                     display: 'true',
+                                    color: '#7F7F7F',
                                     text: 'Total Screen Time'
+                                },
+                                grid: {
+                                    color: '#7F7F7F'
+                                },
+                                ticks: {
+                                    color: '#7F7F7F'
                                 }
                             },
                             y: {
                                 title: {
                                     display: 'true',
+                                    color: '#7F7F7F',
                                     text: 'Social Media Time'
+                                },
+                                grid: {
+                                    color: '#7F7F7F'
+                                },
+                                ticks: {
+                                    color: '#7F7F7F'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#7F7F7F'
                                 }
                             }
                         }
@@ -157,13 +220,34 @@ function Chart(props) {
                                 position: 'bottom',
                                 title: {
                                     display: 'true',
+                                    color: '#7F7F7F',
                                     text: 'Total Screen Time'
+                                },
+                                grid: {
+                                    color: '#7F7F7F'
+                                },
+                                ticks: {
+                                    color: '#7F7F7F'
                                 }
                             },
                             y: {
                                 title: {
                                     display: 'true',
+                                    color: '#7F7F7F',
                                     text: 'Gaming Time'
+                                },
+                                grid: {
+                                    color: '#7F7F7F'
+                                },
+                                ticks: {
+                                    color: '#7F7F7F'
+                                }
+                            }
+                        },
+                        plugins: {
+                            legend: {
+                                labels: {
+                                    color: '#7F7F7F'
                                 }
                             }
                         }

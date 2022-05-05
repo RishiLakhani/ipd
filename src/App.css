@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
-body{
-    background-color: #15181a;
-    font-family: 'Space Mono', monospace;
-    color: rgb(255,255,255);
+
+body {
+  background-color: #15181a;
+  font-family: 'Space Mono', monospace;
+  color: rgb(255, 255, 255);
 }
 
 ul {
@@ -11,52 +12,38 @@ ul {
   list-style: none;
 }
 
-a {
-  font-family: inherit;
-	text-decoration: none;
-  color: #ffff;
-}
-
 .logo {
   font-family: inherit;
-	margin: 0;
-	font-size: 1.45em;
+  margin: 0;
+  font-size: 1.45em;
 }
 
 .main-nav {
   display: flex;
-	margin-top: 5px;
+  margin-top: 5px;
 
 }
-.logo a,
+
 .main-nav a {
   font-family: inherit;
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-align: center;
-	display: block;
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
 }
 
-.main-nav a {
-	color: #FFFF;
-	font-size: .99em;
-}
-
-.main-nav a:hover {
-	color: #FFFF;
-}
-.navbutton{
+.navbutton {
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   color: #FFFF;
-  /* border-color: #FFFF; */
-  border: 2px solid #FFFF ;
+  border: 2px solid #FFFF;
   background-color: transparent;
   width: 215px;
   height: 40px;
   transition: all .5s;
 }
-.navbutton:hover{
+
+.navbutton:hover {
   background-color: #FFFF;
   color: #15181a;
 }
@@ -64,16 +51,13 @@ a {
 .header {
   display: flex;
   justify-content: space-between;
-	padding-top: 1%;
+  padding-top: 1%;
   padding-left: 5%;
   padding-right: 5%;
-	background-color: transparent;
-	border-radius: 5px;
+  background-color: transparent;
+  border-radius: 5px;
 }
 
-.textfield{
-    color: #0bda8f;
-}
 img {
   vertical-align: middle;
   border-style: none;
@@ -82,47 +66,55 @@ img {
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
+
 @keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 15px); }
-    100%   { transform: translate(0, -0px); }   
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 15px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
 }
 
-.typew{
-        /* font-family: 'Space Mono', monospace; */
-    margin-top: 10%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: 'Space Mono', monospace;
-    font-size: 43px;
-    font-weight: 700;
-    line-height: 1.2;
-    /* line-height: 50.75px; */
+.typew {
+  margin-top: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Space Mono', monospace;
+  font-size: 43px;
+  font-weight: 700;
+  line-height: 1.2;
+}
 
+.subscript {
+  font-weight: 400;
+  line-height: 1.5;
 }
-.subscript{
-        /* font-family: 'Space Mono', monospace; */
-    font-weight: 400;
-    line-height: 1.5;
-}
-.button_animated{
-    position: relative;
-    vertical-align: middle;
-    color: #000;
-    border: 2px solid #0bda8f;
-    font-family: 'Space Mono', monospace;
-    background-color: #0bda8f;
+
+.button_animated {
+  position: relative;
+  vertical-align: middle;
+  color: #000;
+  border: 2px solid #0bda8f;
+  font-family: 'Space Mono', monospace;
+  background-color: #0bda8f;
   width: 425px;
   height: 65px;
-    margin-top: 5%;
-    margin-bottom:5%;
-    font-size: 19px;
-    cursor: pointer;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .5s;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-size: 19px;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .5s;
 }
+
 .button_animated::after,
 .button_animated::before {
   content: "";
@@ -137,8 +129,9 @@ img {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 button .button-text {
-    font-weight: 700;
+  font-weight: 700;
   position: absolute;
   display: flex;
   align-items: center;
@@ -149,18 +142,21 @@ button .button-text {
   height: 100%;
   transition: all 0.3s;
 }
+
 .button_animated::after {
   z-index: -1;
 }
-.button_animated:hover .button-text,
-.button_animated:hover::before {
+
+.button_animated:hover .button-text, .button_animated:hover::before {
   -webkit-transform: translate(-15px, -15px);
   -ms-transform: translate(-15px, -15px);
   transform: translate(-15px, -15px);
 }
+
 .button_animated:hover::before {
   border-color: white;
 }
+
 .button_animated:hover::after {
   -webkit-transform: translate(5px, 5px);
   -ms-transform: translate(5px, 5px);

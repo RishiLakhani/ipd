@@ -18,8 +18,8 @@ function Form(props) {
             >
                 CHECK HERE IF YOU ARE ADDICTED TO ANY APPS!
             </Typography>
-            <br/>
-            <br/>
+            <br />
+            <br />
             <Grid container spacing={7} style={{ padding: '30px 100px' }}>
                 <Grid item xs={12} sm={6} md={4} lg={3} style={{ textAlign: 'center' }} >
                     <Typography textAlign="left" >Entertainment:</Typography>

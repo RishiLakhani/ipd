@@ -5,6 +5,7 @@ import Chart from './components/Chart'
 import Output from './components/Output'
 import { Typography } from '@mui/material'
 import Landing from './components/Landing';
+import axios from 'axios'
 
 function App() {
   const [submit, setSubmit] = React.useState(0)
@@ -31,7 +32,7 @@ function App() {
     let temp0 = [];
     let temp1 = [];
     let temp2 = [];
-    for (let x = 0; x <= tot; x += tot) {
+    for (let x = 0; x <= 2 * tot; x += 2 * tot) {
       y = (0.2934828479821102 * x) + 0.10641739637440618;
       temp.push({ x, y })
       y = (0.24720565541730846 * x) + 0.008430595347393668;
@@ -66,6 +67,8 @@ function App() {
 
   React.useEffect(() => {
     if (tot !== 0 && sub !== 0) {
+      axios.post('http://localhost:5000/', { Entertainment: ent, Social_media: soc, Gaming: gam, Education: edu, Health_Fitness: haf, Books_Music: bam, Business_Finance: baf, Other: oth, Total: tot })
+        .then(console.log("success"));
       lines()
       output()
       setSubmit(2)
@@ -80,7 +83,7 @@ function App() {
       {submit === 1 &&
         <>
           <nav className="header">
-            <h1 className="logo" onClick={() => setSubmit(0)}>AppRehab</h1>
+            <h1 className="logo" onClick={() => setSubmit(0)}>ScreenTime</h1>
           </nav>
           <br />
           <Form setEnt={setEnt} setSoc={setSoc} setGam={setGam} setEdu={setEdu} setHaf={setHaf} setBam={setBam} setBaf={setBaf} setOth={setOth} handleCalc={handleCalc} />
@@ -89,7 +92,7 @@ function App() {
       {submit === 2 &&
         <>
           <nav className="header">
-            <h1 className="logo" onClick={() => setSubmit(0)}>AppRehab</h1>
+            <h1 className="logo" onClick={() => setSubmit(0)}>ScreenTime</h1>
           </nav>
           <br />
           <Typography

@@ -8,7 +8,7 @@ function Output(props) {
       {out ?
         <>
           <Typography variant='h5' >We feel that you might be addicted to following:</Typography>
-          <br/>
+          <br />
           {out.includes('Entertainment') &&
             <>
               <Typography>Entertainment:</Typography>
