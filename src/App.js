@@ -67,7 +67,7 @@ function App() {
 
   React.useEffect(() => {
     if (tot !== 0 && sub !== 0) {
-      axios.post('http://localhost:5000/', { Entertainment: ent, Social_media: soc, Gaming: gam, Education: edu, Health_Fitness: haf, Books_Music: bam, Business_Finance: baf, Other: oth, Total: tot })
+      axios.post('https://ipd-screentime-backend.herokuapp.com/', { Entertainment: ent, Social_media: soc, Gaming: gam, Education: edu, Health_Fitness: haf, Books_Music: bam, Business_Finance: baf, Other: oth, Total: tot })
         .then(console.log("success"));
       lines()
       output()
